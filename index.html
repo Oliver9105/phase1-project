@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Search App</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Search for a Product</h1>
+        <div id="instructions">
+            <p>Enter a product name or barcode in the input field and click "Search" to find product details.</p>
+        </div>
+        <input type="text" id="search-input" placeholder="Enter product name or barcode">
+        <button id="search-button">Search</button>
+        <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        <div id="results"></div>
+        <div id="no-results" style="display: none;">No results found. Please try a different search.</div>
+        <h2>Favorites</h2>
+        <button id="clear-favorites-button">Clear Favorites</button>
+        <div id="favorites"></div>
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+</html>

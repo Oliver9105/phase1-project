@@ -111,7 +111,7 @@ toggleDarkModeButton.addEventListener('click', () => {
     const isDarkMode = document.body.classList.toggle('dark-mode');
     document.getElementById('app').classList.toggle('dark-mode');
     resultsDiv.classList.toggle('dark-mode');
-    favoritesDiv.classList.toggle('dark-mode')
+    favoritesDiv.classList.toggle('dark-mode');
 
     
     const products = resultsDiv.querySelectorAll('.product, .favorite');

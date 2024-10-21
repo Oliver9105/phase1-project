@@ -1,41 +1,35 @@
-# phase1-project
 
 # Project Title
+# Product Search App
+Welcome to the Product Search App! This web application allows users to search for products by name, view details, and manage a favorites list. The app also supports dark mode for a better user experience in low-light conditions.
+# Features
 
-A brief description of what this project does and who it's for
+    Product Search: Enter a product name and click view details to find detailed information.
+    Favorites Management: Add and remove products from your favorites list.
+    Dark Mode: Toggle dark mode for a comfortable viewing experience.
+    Responsive Design: Works seamlessly on desktops, tablets, and mobile devices.
 
-Product Search App
-Overview
+# Technologies Used
 
-The Product Search App allows users to search for products using their barcode or name. The application fetches product details from the Open Food Facts API, displays search results, and lets users save their favorite products.
-Features
+    HTML: For the structure of the web app.
+    CSS: For styling, including responsive design and dark mode support.
+    JavaScript: For functionality, including fetching data from APIs and managing state.
+    Open Food Facts API: Used to fetch product information.
 
-    Search Products: Enter a product name or barcode to find details.
-    View Product Information: Displays product name, brand, ingredients, and image.
-    Favorites: Save products to your favorites for quick access later.
-    Dark Mode: Toggle between light and dark mode for a better user experience.
-    Responsive Design: Works well on both desktop and mobile devices.
+# Getting Started
+# Prerequisites
 
-Technologies Used
+    A web browser (Chrome, Firefox, etc.)
+    Basic knowledge of HTML, CSS, and JavaScript (optional)
 
-    HTML
-    CSS
-    JavaScript
-    Open Food Facts API
 
-Getting Started
-Prerequisites
+# Installation
 
-    A modern web browser
-    Internet connection
-
-Installation
-
-    Clone the repository:
+    Clone this repository:
 
     bash
 
-git clone <repository-url>
+git clone https://github.com/Oliver9105/product-search-app.git
 
 Navigate to the project directory:
 
@@ -43,27 +37,22 @@ bash
 
     cd product-search-app
 
-    Open index.html in your preferred web browser.
+    Open index.html in your web browser.
 
-Usage
+# Usage
 
-    Enter a product name or barcode in the input field.
-    Click the "Search" button to find product details.
-    Save your favorite products by clicking the "Favorite" button.
-    Toggle dark mode by clicking the "Toggle Dark Mode" button.
-    Clear your favorites with the "Clear Favorites" button.
+    Enter a product name in the search bar.
+    Click the "Search" button to fetch product details.
+    View product details and add products to your favorites.
+    Toggle dark mode using the "Toggle Dark Mode" button.
+    Manage your favorites list and clear it as needed.
 
-Contributing
+# Contributing
 
-Contributions are welcome! If you have suggestions or improvements, please fork the repository and create a pull request.
+Contributions are welcome! If you have suggestions or improvements, feel free to fork the repository and submit a pull request.
 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the MIT License. See the LICENSE file for details.
 Acknowledgments
 
-    Thanks to the Open Food Facts community for providing the product API.
-    Inspiration from various open-source projects.
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
+    Thanks to Open Food Facts for providing the product API.

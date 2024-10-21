@@ -9,17 +9,28 @@
 <body>
     <div id="app">
         <h1>Search for a Product</h1>
+        <p>Welcome to the Product Search App! Here, you can easily find product details by entering the product name in the search bar. Discover new products and keep track of your favorites!</p>
+        
         <div id="instructions">
-            <p>Enter a product name or barcode in the input field and click "Search" to find product details.</p>
+            <p>Enter a product name in the input field and click "Search" to find product details.</p>
         </div>
-        <input type="text" id="search-input" placeholder="Enter product name or barcode">
+        
+        <input type="text" id="search-input" placeholder="Enter product name">
         <button id="search-button">Search</button>
         <button id="toggle-dark-mode">Toggle Dark Mode</button>
+        
         <div id="results"></div>
         <div id="no-results" style="display: none;">No results found. Please try a different search.</div>
+        
         <h2>Favorites</h2>
         <button id="clear-favorites-button">Clear Favorites</button>
         <div id="favorites"></div>
+
+       
+        <div id="random-products">
+            <h2>Featured Products</h2>
+            <div id="featured-products-container"></div>
+        </div>
     </div>
     <script src="./src/index.js"></script>
 </body>

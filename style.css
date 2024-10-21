@@ -1,4 +1,4 @@
-/* Reset some default styles */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,46 +7,46 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light background */
-    color: #333; /* Dark text */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    background-color: #f0f0f0; 
+    color: #333; 
+    transition: background-color 0.3s, color 0.3s; 
 }
 
-/* Dark mode styles */
+
 body.dark-mode {
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Light text */
+    background-color: #121212; 
+    color: #ffffff; 
 }
 
-/* Main app container */
+
 #app {
     max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
-    background-color: white; /* Light background */
+    background-color: white; 
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s; /* Smooth transition */
+    transition: background-color 0.3s; 
 }
 
-/* Dark mode for app container */
+
 body.dark-mode #app {
-    background-color: #1e1e1e; /* Dark app background */
+    background-color: #1e1e1e; 
 }
 
-/* Header styles */
+
 h1 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Instructions */
+
 #instructions {
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Search input styles */
+
 #search-input {
     width: calc(100% - 22px);
     padding: 10px;
@@ -55,14 +55,14 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Dark mode for search input */
+
 body.dark-mode #search-input {
-    border-color: #444; /* Darker border */
-    background-color: #333; /* Dark input background */
-    color: white; /* Light input text */
+    border-color: #444; 
+    background-color: #333; 
+    color: white; 
 }
 
-/* Button styles */
+
 button {
     background-color: #007BFF;
     color: white;
@@ -78,24 +78,24 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Dark mode for buttons */
+
 body.dark-mode button {
-    background-color: #0056b3; /* Darker button background */
+    background-color: #0056b3;
 }
 
-/* Results and no results styles */
+
 #results, #no-results, #favorites {
     margin-top: 20px;
 }
 
-/* Product item styles */
+
 .product-item {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 16px;
     margin: 10px;
     text-align: center;
-    background-color: #f9f9f9; /* Light background for products */
+    background-color: #f9f9f9;
     transition: transform 0.2s;
 }
 
@@ -103,14 +103,14 @@ body.dark-mode button {
     transform: scale(1.05);
 }
 
-/* Dark mode for product items */
+
 body.dark-mode .product-item {
-    background-color: #333; /* Dark background for product items */
-    color: #fff; /* Light text for product items */
-    border-color: #444; /* Darker border */
+    background-color: #333; 
+    color: #fff; 
+    border-color: #444; 
 }
 
-/* Featured products container */
+
 #featured-products-container, #results, #favorites {
     display: flex;
     flex-wrap: wrap;
@@ -118,49 +118,49 @@ body.dark-mode .product-item {
     margin: 20px 0;
 }
 
-/* Individual product styles within containers */
+
 #featured-products-container .product-item,
 #results .product-item,
 #favorites .product-item {
-    flex: 0 1 calc(25% - 20px); /* 4 items per row */
+    flex: 0 1 calc(25% - 20px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Dark mode for featured products */
+
 body.dark-mode #featured-products-container .product-item,
 body.dark-mode #results .product-item,
 body.dark-mode #favorites .product-item {
-    background-color: #444; /* Dark background for featured products */
+    background-color: #444; 
 }
 
-/* Product details container */
+
 .product-details {
-    max-width: 100%; /* Ensure it doesn't exceed the parent width */
-    padding: 10px; /* Add some padding */
-    border: 1px solid #ccc; /* Optional: add a border for visibility */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background */
+    max-width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    background-color: #f9f9f9; 
 }
 
-/* Dark mode for product details */
+
 body.dark-mode .product-details {
-    background-color: #333; /* Dark background for details */
-    color: white; /* Light text for details */
-    border-color: #444; /* Darker border */
+    background-color: #333; 
+    color: white; 
+    border-color: #444; 
 }
 
-/* Paragraph styles */
+
 .product-details p {
-    margin: 0; /* Remove default margin */
-    padding: 5px 0; /* Add some padding */
+    margin: 0; 
+    padding: 5px 0; 
 }
 
-/* Responsive styles */
+
 @media (max-width: 768px) {
     #featured-products-container .product-item,
     #results .product-item,
     #favorites .product-item {
-        flex: 0 1 calc(50% - 20px); /* 2 items per row on smaller screens */
+        flex: 0 1 calc(50% - 20px); 
     }
 }
 
@@ -168,6 +168,6 @@ body.dark-mode .product-details {
     #featured-products-container .product-item,
     #results .product-item,
     #favorites .product-item {
-        flex: 0 1 100%; /* 1 item per row on very small screens */
+        flex: 0 1 100%; 
     }
 }

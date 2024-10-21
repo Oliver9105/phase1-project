@@ -9,7 +9,7 @@ const featuredProductsContainer = document.getElementById('featured-products-con
 
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-// Function to toggle dark mode elements
+
 const toggleDarkModeElements = (isDarkMode) => {
     const elements = document.querySelectorAll('.product-details, .favorite-item');
     elements.forEach(element => {
@@ -21,14 +21,14 @@ const toggleDarkModeElements = (isDarkMode) => {
     });
 };
 
-// Check and apply dark mode from local storage
+
 const isDarkMode = localStorage.getItem('dark-mode') === 'enabled';
 if (isDarkMode) {
     document.body.classList.add('dark-mode');
     toggleDarkModeElements(true);
 }
 
-// Function to fetch products
+
 const fetchProducts = async (url) => {
     try {
         const response = await fetch(url);
@@ -40,13 +40,13 @@ const fetchProducts = async (url) => {
     }
 };
 
-// Function to fetch and display products based on a query
+
 const fetchAndDisplayProducts = async (query) => {
     const data = await fetchProducts(`https://world.openfoodfacts.org/cgi/search.pl?search_terms=${query}&search_simple=1&action=process&json=1`);
     displayProducts(data?.products || []);
 };
 
-// Function to fetch featured products
+
 const fetchFeaturedProducts = async () => {
     const data = await fetchProducts('https://world.openfoodfacts.org/cgi/search.pl?sort_by=popularity&json=1&action=process');
     if (data?.products) {
@@ -54,7 +54,7 @@ const fetchFeaturedProducts = async () => {
     }
 };
 
-// Function to display search results
+
 const displayProducts = (products) => {
     resultsDiv.innerHTML = ''; 
     if (products.length > 0) {
@@ -66,13 +66,13 @@ const displayProducts = (products) => {
     }
 };
 
-// Function to display featured products
+
 const displayFeaturedProducts = (products) => {
     featuredProductsContainer.innerHTML = '';
     products.forEach(product => createProductElement(product, featuredProductsContainer, false));
 };
 
-// Function to create product elements
+
 const createProductElement = (product, container, isSearchResult) => {
     const productDiv = document.createElement('div');
     productDiv.classList.add('product-item');
@@ -85,7 +85,7 @@ const createProductElement = (product, container, isSearchResult) => {
     container.appendChild(productDiv);
 };
 
-// Event listener for search button
+
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim();
     if (query) {
@@ -95,7 +95,7 @@ searchButton.addEventListener('click', () => {
     }
 });
 
-// Function to view product details
+
 const viewProductDetails = async (productId) => {
     const data = await fetchProducts(`https://world.openfoodfacts.org/api/v0/product/${productId}.json`);
     if (data?.product) {
@@ -118,7 +118,7 @@ const viewProductDetails = async (productId) => {
     }
 };
 
-// Function to attach button listeners for favorites and details
+
 const attachButtonListeners = () => {
     document.querySelectorAll('.favorite-button').forEach(button => {
         button.addEventListener('click', () => {
@@ -136,14 +136,14 @@ const attachButtonListeners = () => {
     });
 };
 
-// Function to toggle favorite products
+
 const toggleFavorite = (productId) => {
     favorites = favorites.includes(productId) ? favorites.filter(id => id !== productId) : [...favorites, productId];
     localStorage.setItem('favorites', JSON.stringify(favorites));
     displayFavorites();
 };
 
-// Function to display favorite products
+
 const displayFavorites = () => {
     favoritesDiv.innerHTML = ''; 
     if (favorites.length > 0) {
@@ -158,20 +158,20 @@ const displayFavorites = () => {
     }
 };
 
-// Event listener for clearing favorites
+
 clearFavoritesButton.addEventListener('click', () => {
     favorites = [];
     localStorage.removeItem('favorites');
     displayFavorites();
 });
 
-// Event listener for toggling dark mode
+
 toggleDarkModeButton.addEventListener('click', () => {
     const isDarkMode = document.body.classList.toggle('dark-mode');
     localStorage.setItem('dark-mode', isDarkMode ? 'enabled' : 'disabled');
     toggleDarkModeElements(isDarkMode);
 });
 
-// Initial display of favorites and featured products
+
 displayFavorites();
 fetchFeaturedProducts();

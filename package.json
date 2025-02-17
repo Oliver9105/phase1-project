@@ -1,0 +1,20 @@
+{
+  "name": "phase1-project",
+  "version": "1.0.0",
+  "description": "Welcome to the Product Search App! This web application allows users to search for products by name, view details, and manage a favorites list. The app also supports dark mode for a better user experience in low-light conditions. # Features",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oliver9105/phase1-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oliver9105/phase1-project/issues"
+  },
+  "homepage": "https://github.com/Oliver9105/phase1-project#readme"
+}
